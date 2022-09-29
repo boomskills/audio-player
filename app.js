@@ -20,7 +20,7 @@ const draggableClasses = ["pin"];
 let currentlyDragged = null;
 let currentTrack = 0;
 
-const songs = [
+const tracks = [
   {
     title: "rockstar",
     artist: "Post Malone, 21 Savage",
@@ -41,7 +41,7 @@ const songs = [
   },
 ];
 
-songs.map((song, i) => renderSongs(song, i));
+tracks.map((track, i) => renderSongs(track, i));
 
 window.addEventListener("mousedown", function (event) {
   if (!isDraggable(event.target)) return false;
@@ -253,7 +253,7 @@ function renderSongs(song, i) {
 function handleChange(position = 0) {
   currentTrack = position;
 
-  const song = songs[currentTrack];
+  const song = tracks[currentTrack];
 
   if (song) {
     document.querySelector("audio").setAttribute("src", song.audioFile);
