@@ -239,10 +239,10 @@ function handleActiveClass(container) {
   container.classList.toggle("active");
 }
 
-function renderSongs(song, index) {
+function renderSongs(song, i) {
   const track = `
-    <li class="song" data-audio="${song.audioFile}" style="display:none">
-        <img src="${song.cover}" alt="Song ${index}">
+    <li class="song" data-audio="${song.audioFile}" style="display:none" id="${i}">
+        <img src="${song.cover}" alt="${song.title}">
         <p class="song-title">${song.title}</p>
         <p class="song-artist">${song.artist}</p>
     </li>
@@ -250,8 +250,8 @@ function renderSongs(song, index) {
   tracksContainer.insertAdjacentHTML("beforeend", track);
 }
 
-function handleChange(page = 0) {
-  currentTrack = page;
+function handleChange(position = 0) {
+  currentTrack = position;
 
   const song = songs[currentTrack];
 
