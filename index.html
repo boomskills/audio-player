@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Audio Player</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100;400;700&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/e98d710f82.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./app.css">
+</head>
+
+<body>
+    <main>
+        <div class="player" id="player">
+            <div class="list" id="list">
+                <ul class="songs" id="songs">
+                    <li class="song" id="song-0"
+                        data-audio="https://s3-us-west-2.amazonaws.com/s.cdpn.io/308622/Leo%20-%20Trying.mp3">
+                        <img src="./koa-img.webp" alt="song 0">
+                        <p class="song-title">Kabza De Small - KOA II Complete Album Mix</p>
+                        <p class="song-artist">Kabza De Small</p>
+                    </li>
+                </ul>
+            </div>
+            <audio crossorigin>
+                <source src="" type="audio/mpeg">
+            </audio>
+            <div class="controls" id="controls">
+                <span class="previous-btn">
+                    <i class="fa fa-step-backward fa-fw" id="previous-icon" aria-hidden="true"></i>
+                </span>
+                <span class="play-btn">
+                    <i class="fa fa-play fa-fw" id="play-icon" aria-hidden="true"></i>
+                </span>
+                <span class="next-btn">
+                    <i class="fa fa-step-forward fa-fw" id="next-icon" aria-hidden="true"></i>
+                </span>
+            </div>
+            <div class="timeline" id="timeline">
+                <span id="current-time">--:--</span>
+                <span id="total-time">--:--</span>
+                <div class="slider">
+                    <div class="progress">
+                        <div class="pin" id="progress-pin" data-method="rewind"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="sub-controls" id="subcontrols">
+                <i class="fa fa-random" id="random-icon" aria-hidden="true" title="Random"></i>
+                <i class="fa fa-refresh" id="refresh-icon" aria-hidden="true" title="Refresh"></i>
+                <i class="fa fa-bluetooth-b" id="bluetooth-icon" aria-hidden="true" title="Bluetooth"></i>
+                <i class="fa fa-heart-o" id="heart-icon" aria-hidden="true" title="Like"></i>
+            </div>
+        </div>
+    </main>
+    <script src="./app.js" async defer></script>
+</body>
+
+</html>

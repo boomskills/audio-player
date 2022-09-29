@@ -1,0 +1,213 @@
+:root {
+    --color-primary: #1BA7E8;
+    --color-white: #fff;
+    --color-active: #e74c3c;
+    --font-family: 'Lato', sans-serif;
+    --font-size-md: 1rem;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--font-family);
+    color: var(--color-white);
+    background: linear-gradient(89.83deg, var(--color-primary) 0.79%, var(--color-primary) 99.46%);
+    margin: auto 2rem;
+}
+
+
+img {
+    max-width: 100%;
+}
+
+ul {
+    list-style: none;
+}
+
+.player {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 37.5rem;
+    margin-top: 2rem;
+    background: #030303;
+}
+
+/* SONG LISTS */
+
+.list {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.list .songs {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.list .songs .song{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 1.5rem .8rem;
+}
+
+.list .songs .song p {
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.15);
+}
+
+.list .songs .song img {
+    max-width: 37.5rem;
+}
+
+.list .songs .song .song-title{
+    margin-top: 2.5rem;
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: #fff;
+}
+
+.list .songs .song .song-artist{
+    font-size: 1.5rem;
+    font-weight: 100;
+    font-family: var(--font-family);
+    margin-top: .8rem;
+    color: #fff;
+}
+
+/* CONTROLS */
+.controls {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 1.5rem .8rem;
+}
+
+.controls span {
+    display: table-cell;
+    font-size: 1.25rem;
+    vertical-align: middle;
+    margin: 0 2rem;
+}
+
+.controls .play-btn {
+    font-size: 2.125rem;
+}
+
+.controls i {
+    cursor: pointer;
+}
+
+/* TIMELINE */
+.timeline {
+    position: relative;
+    margin: 0 auto;
+    width: 75%;
+}
+
+.timeline span {
+    color: var(--color-white);
+    font-size: 14px;
+    font-weight: 100;
+    position: absolute;
+    top: -0.625rem;
+}
+
+.timeline #current-time {
+    left: 0;
+}
+
+.timeline #total-time {
+    right: 0;
+}
+
+.timeline .slider {
+    background-color: rgba(255,255,255, 50%);
+    cursor: pointer;
+    height: 0.25rem;
+    position: relative;
+    width: 100%;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    -ms-border-radius: 2px;
+    -o-border-radius: 2px;
+    border-radius: 2px;
+    margin: 1rem 0;
+}
+
+.timeline .slider .progress {
+    background-color: var(--color-active);
+    height: 100%;
+    pointer-events: none;
+    position: absolute;
+    width: 0;
+    margin: 0;
+    padding: 0;
+}
+
+.timeline .slider .progress .pin {
+    background-color: var(--color-white);
+    height: 0.75rem;
+    position: absolute;
+    pointer-events: all;
+    right: -5px;
+    top: -4px;
+    width: 0.75rem;
+    box-shadow(0px 1px 1px 0px, rgba(0, 0, 0, 0.32));
+    transition(transform 0.25s ease);
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    -ms-border-radius: 8px;
+    -o-border-radius: 8px;
+    border-radius: 8px;
+}
+
+.timeline .slider .progress .pin .active{
+    transform(scale(1.5));
+}
+
+
+/* SUB CONTROL */
+.sub-controls{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 1.5rem 0;
+    color: rgba(255,255,255, 40%);
+    cursor: default;
+}
+
+.sub-controls i {
+    font-size: 1.1rem;
+    cursor: pointer;
+    margin: 0 3rem;
+}
+
+.sub-controls .active {
+    font-size: 1.1rem;
+    cursor: pointer;
+    margin: 0 3rem;
+    color: var(--color-active);
+}
+
